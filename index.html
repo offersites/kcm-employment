@@ -494,26 +494,17 @@ button:hover {
   
                 <input type="text" name="_name" placeholder="Enter your name"><br/>
 
-		<p class="title">Please enter your name again to continue</p>
-		<label class="container">One
-  <input type="checkbox" checked">
-  <span class="checkmark"></span>
-</label>
+		<p>The <strong>input type="checkbox"</strong> defines a checkbox:</p>
 
-<label class="container">Two
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
-
-<label class="container">Three
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
-
-<label class="container">Four
-  <input type="checkbox">
-  <span class="checkmark"></span> 
-</label><br/>
+<form action="/action_page.php">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label><br><br>
+  <input type="submit" value="Submit">
+</form> 
 		<p class="title"><font color="white">Please enter your name again to continue</p><br/>
 		
                 <input type="text" name="_name" placeholder="Enter your age"><br/>
