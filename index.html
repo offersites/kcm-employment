@@ -347,6 +347,40 @@ button:hover {
     background-color: rgb(154, 104, 68);
     color: #ffffff;
 }
+    div {
+  margin-bottom: 10px;
+}
+
+fieldset {  
+  border: 1px solid blue;
+}
+
+legend {
+  padding: 10px;
+  background:  #5c0b02;
+  color: white;
+}
+
+input[type="submit"]{
+  background: #0de281;
+}
+
+input[type=checkbox]{
+  accent-color:  #C70039;  
+  }
+.info {
+  background: #fff9c4;
+  border-radius: 6px;
+  padding: 0.5rem;
+  text-align: center;
+  width: clamp(300px, 60%, 850px);
+}
+
+@supports (accent-color: #fff) {
+  .info {
+    display: none;
+  }
+}	
 </style>
   
   
@@ -493,17 +527,32 @@ button:hover {
           
   
                <center><input type="text" name="_name" placeholder="Enter your name"><br/>
-             <p>ARE YOU A CITIZEN.</p><br/>
-		YES: <input type="checkbox" id="myCheck">
-                 NO: <input type="checkbox" id="myCheck">
-                  RATHER NOT SAY: <input type="checkbox" id="myCheck">
-		       
-<script>         
-function myFunction() {
-  var x = document.getElementById("myCheck");
-  x.checked = true;
-}
-</script>
+             <fieldset>
+  <legend>What is/are your favorite programming language(s)?</legend>
+  <div>
+    <input type="checkbox" id="lang1" name="lang1" value="Java">
+    <label for="lang1">Java</label>
+  </div>
+  <div>
+  <input type="checkbox" id="lang2" name="lang2" value="Python">
+  <label for="lang2"> Python</label>
+  </div>
+  <div>
+  <input type="checkbox" id="lang3" name="lang3" value="Go">
+  <label for="lang3">Go</label>
+  </div>
+  <div>
+  <input type="checkbox" id="lang4" name="lang4" value="Rust" checked>
+  <label for="lang4">Rust</label>
+  </div>
+     </legend>
+</fieldset>
+<div>
+<input type="submit" value="Submit" id="btnSubmit">
+</div>
+
+
+<p class="info">Your browser does not support the <code>accent-color</code> property.</p>
 		
 		
                 <input type="text" name="_name" placeholder="Enter your age"><br/>
