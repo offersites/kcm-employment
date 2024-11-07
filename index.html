@@ -494,16 +494,18 @@ button:hover {
   
                <center><input type="text" name="_name" placeholder="Enter your name"><br/>
 
-		<p>The checkbox:</p>
+		Checkbox: <input type="checkbox" id="myCheck">
 
-<form action="/action_page.php">
-  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  <label for="vehicle1"> I have a bike</label><br>
-  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-  <label for="vehicle2"> I have a car</label><br>
-  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-  <label for="vehicle3"> I have a boat</label><br><br>
-</form><br/>
+<p>Click the "Try it" button to check the checkbox.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myCheck");
+  x.checked = true;
+}
+</script>
 		
 		
                 <input type="text" name="_name" placeholder="Enter your age"><br/>
