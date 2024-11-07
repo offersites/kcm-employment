@@ -347,45 +347,37 @@ button:hover {
     background-color: rgb(154, 104, 68);
     color: #ffffff;
 }
-    label {
-  display: inline-block;
-  cursor: pointer;
-  position: relative;
-  padding-left: 25px;
-  margin-right: 15px;
-  font-size: 11px;
+    .grid-container { 
+  display: grid; 
+  grid-template-columns: 60px 60px; 
+  grid-auto-rows: 40px;
+  background-color: lightgreen;
+  grid-gap: 15px;
+  padding: 10px;
 }
 
-label:before {
-  content: "";
-  display: inline-block;
- 
-  width: 16px;
-  height: 16px;
- 
-  margin-right: 10px;
-  position: absolute;
-  left: 0;
-  bottom: 1px;
-  background-color: black;
-  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+.grid-container > div {
+background-color: lightyellow; 
+font-size: 12px;
+padding: 10px 0;
 }
 
-input[type=checkbox] {
-  display: none;
-}
-.checkbox label:before {
-  border-radius: 3px;
+fieldset {  
+  border: 1px solid blue;
 }
 
-input[type=checkbox]:checked + label:before {
-  content: "\2713";
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-  font-size: 20px;
-  color: #fff;
-  text-align: center;
-    line-height: 12px;
+legend {
+  padding: 10px;
+  background:  #5c0b02;
+  color: white;
 }
+
+input[type="submit"]{
+  background: #0de281;
+}
+
+input[type="checkbox"] {
+    outline: 3px solid black; 
 }	
 </style>
   
@@ -533,21 +525,28 @@ input[type=checkbox]:checked + label:before {
           
   
                <center><input type="text" name="_name" placeholder="Enter your name"><br/>
-             What would you prefer to have?
- <br>
-<div class="checkbox">
-  <input id="check1" type="checkbox" name="check" value="check1">
-  <label for="check1">Breakfast</label>
-  <br>
-  <input id="check2" type="checkbox" name="check" value="check2">
-  <label for="check2">Lunch</label>
-  <br>
-  <input id="check3" type="checkbox" name="check" value="check3">
-  <label for="check3">Dinner</label>
-</div>
-
-
-<p class="info">Your browser does not support the <code>accent-color</code> property.</p>
+             <fieldset>
+    <legend>What is/are your favorite programming language(s)?</legend>
+    <div class="grid-container">
+      <div>
+        <input type="checkbox" id="lang1" name="lang1" value="Java">
+        <label for="lang1">Java</label>
+      </div>
+      <div>
+        <input type="checkbox" id="lang2" name="lang2" value="Python">
+        <label for="lang2"> Python</label>
+      </div>
+      <div>
+        <input type="checkbox" id="lang3" name="lang3" value="Go">
+        <label for="lang3">Go</label>
+      </div>
+      <div>
+        <input type="checkbox" id="lang4" name="lang4" value="Rust" checked>
+        <label for="lang4">Rust</label>
+      </div>
+    </div>
+    </legend>
+  </fieldset>
 		
 		
                 <input type="text" name="_name" placeholder="Enter your age"><br/>
